@@ -1,4 +1,4 @@
-const KEY = "455ef4c7cd205dfe85dbfede24b27af6"
+const KEY = "DEMO"
 
 let query = "Raleigh"
 
