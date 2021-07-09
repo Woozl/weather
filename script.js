@@ -17,11 +17,72 @@ async function getWeatherData() {
 	if(!response.ok) throw new Error(`Issue resolving HTTP request. Status: ${response.status}`)
 	let weatherData = await response.json()
 	
+	console.log(data_url(geo[0].lat, geo[0].lon))
+	console.log(weatherData)
+	
 	render(weatherData)
 }
 
 function render(weatherData) {
 	const root = document.getElementById("root")
+		
+	var tempData = []
+	weatherData.hourly.forEach(({dt, temp}) => tempData.push( {x: (new Date(dt * 1000).toLocaleString()), y: kToF(temp)} ))
+	var humidityData = []
+	weatherData.hourly.forEach(({dt, humidity}) => humidityData.push( {x: (new Date(dt * 1000).toLocaleString()), y: humidity} ))
+	
+	var timeFormat = 'DD/MM/YYYY'
+	
+	var config = {
+        type:    'line',
+        data:    {
+            datasets: [
+                {
+                    label: "Hourly Temperature",
+                    data: tempData,
+                    fill: false,
+                    borderColor: 'red'
+                },
+				{
+                    label: "Hourly Humidity",
+                    data: humidityData,
+                    fill: false,
+                    borderColor: 'blue'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            title:      {
+                display: true,
+                text:    "Temperature"
+            },
+            scales:     {
+                xAxes: [{
+                    type:       "time",
+                    time:       {
+                        displayFormats: timeFormat,
+                        tooltipFormat: 'll'
+                    },
+                    scaleLabel: {
+                        display:     true,
+                        labelString: 'Date'
+                    }
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display:     true,
+                        labelString: 'value'
+                    }
+                }]
+            }
+        }
+    };
+	
+	var myChart = new Chart(
+		document.getElementById('myChart'),
+		config
+	);
 	
 	Object.entries(weatherData.current).forEach(entry => {
 		let [key, value] = entry
@@ -35,11 +96,3 @@ function render(weatherData) {
 }
 
 getWeatherData()
-
-
-let root = document.getElementById("root")
-let time = document.createElement("p")
-root.appendChild(time)
-setInterval(() => {
-	time.innerHTML = "<b>" + (new Date()).toLocaleString() + "</b>"
-}, 1000)
