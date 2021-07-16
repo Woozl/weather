@@ -95,4 +95,4 @@ function render(weatherData) {
 	})
 }
 
-getWeatherData()
+//getWeatherData()

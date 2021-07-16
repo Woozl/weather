@@ -1,0 +1,28 @@
+<svg width="300" height="300" version="1.1" viewBox="0 0 79.375 79.375" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<circle transform="rotate(16.342)" cx="60.761" cy="5.5628" r="12.26" fill="#eb6e4b" style="mix-blend-mode:normal"/>
+	<g fill="none" stroke="#eb6e4b" stroke-linecap="round" stroke-width="4.0435">
+		<path d="m61.142 7.1096 1.4401-4.9116" style="mix-blend-mode:normal"/>
+		<path d="m71.786 26.583 4.9115 1.4404" style="mix-blend-mode:normal"/>
+		<path d="m70.497 14.641 4.4914-2.4547" style="mix-blend-mode:normal"/>
+		<path d="m49.204 8.3976-2.4542-4.4917" style="mix-blend-mode:normal"/>
+	</g>
+	<g>
+		<path d="m30.664 8.8558c-6.4908-0.12209-12.572 4.8957-13.684 11.292-0.3964 2.0417-0.32678 4.1719 0.20234 6.1833-5.8877-1.153-12.2 2.654-13.927 8.3999-1.9508 5.6426 0.8986 12.391 6.3049 14.926 3.6004 1.893 7.7508 1.1185 11.641 1.2788 13.07-0.02469 26.165 0.04932 39.219-0.03698 5.1474-0.30053 9.45-5.1281 9.159-10.276-0.04603-5.1376-4.6213-9.6645-9.7591-9.6559-1.0924 0.06649-2.0357 0.31976-1.3486-1.0491 0.9272-4.4107-2.388-9.1045-6.8577-9.6992-2.5072-0.41824-5.1803 0.4052-7.018 2.1613-0.070806-6.4915-5.2671-12.421-11.693-13.343-0.73953-0.12037-1.4888-0.18096-2.2381-0.18096z" fill="#fff" stroke="#000" stroke-linecap="square" stroke-linejoin="round" stroke-width="3.0023" style="paint-order:normal"/>
+	</g>
+	<g display="none" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2.1564">
+		<path d="m29.265 49.572-0.35071 0.71907" display="inline"/>
+		<path d="m35.13 51.87-1.0525 2.1579" display="inline"/>
+		<path d="m42.48 50.386-0.65253 1.3379" display="inline"/>
+		<path d="m39.796 55.889-1.0525 2.1579" display="inline"/>
+		<path d="m27.653 52.876-1.0525 2.1579" display="inline"/>
+		<path d="m32.46 57.346-0.4595 0.94212" display="inline"/>
+	</g>
+	<g fill="none" stroke="#000" stroke-linecap="round" stroke-width="3.3945">
+		<path d="m22.724 55.88-2.0433 3.859"/>
+		<path d="m33.856 55.912-3.2296 6.325"/>
+		<path d="m45.029 55.876-5.4298 10.049"/>
+		<path d="m17.802 64.914-4.0985 7.8221"/>
+		<path d="m27.408 67.709-5.0751 9.6903"/>
+		<path d="m36.89 71.1-2.0213 3.7586"/>
+	</g>
+</svg>

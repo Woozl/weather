@@ -1,0 +1,123 @@
+:root {
+    font-family: Overpass, sans-serif;
+    --background-color: hsl(224, 12%, 17%);
+    --card-color: hsl(224, 12%, 30%);
+    --lighter-card-color: hsl(224, 12%, 40%);
+    --link: hsl(204, 100%, 50%);
+    --link-hover: hsl(204, 100%, 65%);
+    --link-active: hsl(204, 100%, 80%) --desktop-width: 1200px;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--card-color);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--lighter-card-color);
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--link);
+}
+
+a:visited {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+a:active {
+    color: var(--link-active);
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0px;
+}
+
+.root {
+    height: 100vh;
+}
+
+h1 {
+    margin: 0px;
+    padding-top: 10px;
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.card {
+    background-color: var(--card-color);
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 14px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.current {
+    grid-area: current;
+}
+
+.hourly { 
+    grid-area: hourly;
+}
+
+.daily {
+    grid-area: daily;
+}
+
+.info {
+    grid-area: info;   
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.flex-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.grid-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px 0 25px;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "current hourly hourly"
+            "daily daily info";
+        gap: 25px;
+    }
+
+    .card {
+        margin-bottom: 0px;
+    }
+}

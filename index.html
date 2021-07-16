@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-	<head>
-		<title>Weather</title>
-		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js" charset="utf-8"></script>
-		<script src="script.js" defer></script>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<div id="root">
-			<canvas width=100 height=50 id="myChart" ></canvas>
+
+<head>
+	<title>Weather</title>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js" charset="utf-8"></script> -->
+	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="root">
+		<!-- <canvas width=100 height=50 id="myChart" ></canvas> -->
+		
+		<div class="flex-container">
+			<header>
+				<h1>Raleigh, NC</h1>
+			</header>
+			<div class="grid-container">
+				<div class="card current">Current</div>
+				<div class="card hourly">Hourly</div>
+				<div class="card daily">Daily</div>
+				<div class="card info">Info</div>
+			</div>
+			<footer>
+				<p><span class="unit-selector">°F | °C</span> <span class="theme-selector">Dark | Light</span><p>
+				<p>Made by <a href="https://github.com/Woozl" target="_blank">David Glymph</a></p>
+			</footer>
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>
