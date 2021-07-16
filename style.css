@@ -50,7 +50,7 @@ h1 {
     margin: 0px;
     padding-top: 10px;
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     text-align: center;
 }
@@ -64,7 +64,7 @@ h1 {
     color: white;
     text-align: center;
     padding: 10px;
-    font-size: 20px;
+    font-size: 1rem;
     margin-bottom: 25px;
 }
 
@@ -106,7 +106,7 @@ footer {
     padding: 0 25px 0 25px;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -119,5 +119,10 @@ footer {
 
     .card {
         margin-bottom: 0px;
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 4rem;
     }
 }
